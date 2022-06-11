@@ -1,6 +1,6 @@
-# Pixel Color Picker
+# Pixel Color Image
 
-https://pub.dev/packages/pixel_color_picker
+https://pub.dev/packages/pixel_color_image
 
 <br>
 <br>
@@ -21,10 +21,10 @@ final imageBytes = await getImageBytesAsset("images/xxx.png");
 final imageBytes = await getImageBytesUrl("http://xxx.com/xxx.png");
 ```
 
-### 2. Create picker widget
+### 2. Create widget
 
 ```
-final picker = PixelColorPicker(
+final pixelColorImage = PixelColorImage(
   uint8List: imageBytes,
   onHover: onHover,
   onTap: onTap,

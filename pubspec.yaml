@@ -1,10 +1,10 @@
-name: pixel_color_picker
+name: pixel_color_image
 description: >
   Pick the pixel color of a image.
   Super simple and Easy to use.
 version: 1.0.0
-homepage: https://github.com/rbdog/pixel_color_picker
-repository: https://github.com/rbdog/pixel_color_picker
+homepage: https://github.com/rbdog/pixel_color_image
+repository: https://github.com/rbdog/pixel_color_image
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -13,8 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http:
-  image:
+  http: ^0.13.4
+  image: ^3.2.0
 
 dev_dependencies:
   flutter_test:

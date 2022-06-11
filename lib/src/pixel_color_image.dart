@@ -2,22 +2,22 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image/image.dart' as img_lib;
 
-class PixelColorPicker extends StatelessWidget {
+class PixelColorImage extends StatelessWidget {
   // RowData
-  final Uint8List uint8List;
+  final Uint8List imageBytes;
   // Cache
   final img_lib.Image image;
   // Delegate
   final void Function(int x, int y, Color color)? onHover;
   final void Function(int x, int y, Color color)? onTap;
   final Widget Function(BuildContext context, Image image)? buildImage;
-  PixelColorPicker({
+  PixelColorImage({
     Key? key,
-    required this.uint8List,
+    required this.imageBytes,
     this.onHover,
     this.onTap,
     this.buildImage,
-  })  : image = img_lib.decodeImage(uint8List)!,
+  })  : image = img_lib.decodeImage(imageBytes)!,
         super(key: key);
 
   @override
@@ -40,9 +40,9 @@ class PixelColorPicker extends StatelessWidget {
         },
         child: buildImage?.call(
               context,
-              Image.memory(uint8List),
+              Image.memory(imageBytes),
             ) ??
-            Image.memory(uint8List),
+            Image.memory(imageBytes),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pixel_color_picker/pixel_color_picker.dart';
+import 'package:pixel_color_image/pixel_color_image.dart';
 
 /// Called while Hoverring
 void onHover(int x, int y, Color color) async {
@@ -16,9 +16,9 @@ void main() async {
   // Get image bytes
   final imageBytes = await getImageBytesAsset("images/xxx.png");
 
-  // Create picker widget
-  final picker = PixelColorPicker(
-    uint8List: imageBytes,
+  // Create widget
+  final pixelColorImage = PixelColorImage(
+    imageBytes: imageBytes,
     onHover: onHover,
     onTap: onTap,
   );
@@ -26,7 +26,7 @@ void main() async {
   // Create app
   final app = MaterialApp(
     home: Scaffold(
-      body: picker, // Use picker widget
+      body: pixelColorImage, // Use widget
     ),
   );
 
