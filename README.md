@@ -1,3 +1,5 @@
+![Header](https://github.com/rbdog/pixel_color_image/blob/main/resources/images/pixel-color-image-header.png?raw=true)
+
 # Pixel Color Image
 
 https://pub.dev/packages/pixel_color_image
@@ -7,31 +9,29 @@ https://pub.dev/packages/pixel_color_image
 
 ## Usage
 
-### 1. Get image bytes
+### 1. Create widget (asset image)
 
-- asset image
-
-```
-final imageBytes = await getImageBytesAsset("images/xxx.png");
-```
-
-- url image
+- use asset image
 
 ```
-final imageBytes = await getImageBytesUrl("http://xxx.com/xxx.png");
-```
-
-### 2. Create widget
-
-```
-final pixelColorImage = PixelColorImage(
-  uint8List: imageBytes,
+const pixelColorImage = PixelColor.assetImage(
+  path: 'images/xxx.png',
   onHover: onHover,
   onTap: onTap,
 );
 ```
 
-### 3. these functions are called
+- use url image
+
+```
+const pixelColorImage = PixelColor.networkImage(
+  url: 'https://example.com/xxx.png',
+  onHover: onHover,
+  onTap: onTap,
+);
+```
+
+### 2. these functions are called
 
 ```
 /// Called while Hoverring

@@ -13,18 +13,15 @@ void onTap(int x, int y, Color color) async {
 
 /// main
 void main() async {
-  // Get image bytes
-  final imageBytes = await getImageBytesAsset("images/xxx.png");
-
   // Create widget
-  final pixelColorImage = PixelColorImage(
-    imageBytes: imageBytes,
+  const pixelColorImage = PixelColor.assetImage(
+    path: 'images/xxx.png',
     onHover: onHover,
     onTap: onTap,
   );
 
   // Create app
-  final app = MaterialApp(
+  const app = MaterialApp(
     home: Scaffold(
       body: pixelColorImage, // Use widget
     ),
