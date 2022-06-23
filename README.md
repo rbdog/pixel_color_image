@@ -9,7 +9,7 @@ https://pub.dev/packages/pixel_color_image
 
 ## Usage
 
-### 1. Create widget (asset image)
+### 1. Create widget
 
 - use asset image
 
