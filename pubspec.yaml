@@ -2,7 +2,7 @@ name: pixel_color_image
 description: >
   Pick the pixel color of a image.
   Super simple and Easy to use.
-version: 1.1.1
+version: 1.2.0
 homepage: https://github.com/rbdog/pixel_color_image
 repository: https://github.com/rbdog/pixel_color_image
 

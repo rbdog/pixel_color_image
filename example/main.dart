@@ -11,22 +11,40 @@ void onTap(int x, int y, Color color) async {
   debugPrint('Tap x: $x, y: $y, color: $color');
 }
 
+/// Refarence for Preview
+final ref = PixelColorRef();
+
 /// main
 void main() async {
-  // Create widget
-  const pixelColorImage = PixelColor.assetImage(
+  // Image
+  final pixelColorImage = PixelColor.assetImage(
     path: 'images/xxx.png',
     onHover: onHover,
     onTap: onTap,
+    ref: ref,
   );
 
-  // Create app
-  const app = MaterialApp(
+  //
+  // connect preview by "ref"
+  //
+
+  // Color Preview
+  final pixelColorPreview = PixelColorPreview(
+    ref: ref,
+  );
+
+  // App
+  final app = MaterialApp(
     home: Scaffold(
-      body: pixelColorImage, // Use widget
+      body: Column(
+        children: [
+          pixelColorPreview, // color preview
+          pixelColorImage, // image
+        ],
+      ),
     ),
   );
 
-  // Run app
+  // Run App
   runApp(app);
 }

@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:pixel_color_image/pixel_color_image.dart';
+import 'package:pixel_color_image/src/pixel_color_preview.dart';
 
 /// PixelColor
 class PixelColor extends StatelessWidget {
@@ -10,10 +11,18 @@ class PixelColor extends StatelessWidget {
   /// url
   final String? url;
 
-  // Delegate
+  /* Delegate */
+  /// onHover
   final void Function(int x, int y, Color color)? onHover;
+
+  /// onTap
   final void Function(int x, int y, Color color)? onTap;
+
+  /// buildImage
   final Widget Function(BuildContext context, Image image)? buildImage;
+
+  /// ref
+  final PixelColorRef? ref;
 
   /// from assets
   const PixelColor.assetImage({
@@ -22,6 +31,7 @@ class PixelColor extends StatelessWidget {
     this.onHover,
     this.onTap,
     this.buildImage,
+    this.ref,
   })  : url = null,
         super(key: key);
 
@@ -32,6 +42,7 @@ class PixelColor extends StatelessWidget {
     this.onHover,
     this.onTap,
     this.buildImage,
+    this.ref,
   })  : path = null,
         super(key: key);
 
@@ -63,6 +74,7 @@ class PixelColor extends StatelessWidget {
             onHover: onHover,
             onTap: onTap,
             buildImage: buildImage,
+            ref: ref,
           );
         } else {
           return const CircularProgressIndicator();

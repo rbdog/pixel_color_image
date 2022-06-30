@@ -4,7 +4,7 @@
 
 ## 1.0.1
 
-- fix documents
+- fix: documents
 
 ## 1.1.0
 
@@ -13,4 +13,11 @@
 
 ## 1.1.1
 
-- fix PixelColor
+- fix: PixelColor
+
+## 1.2.0
+
+- fix: Color ABGR to ARGB
+- fix: adjust to resize of widget
+- add: PixelColorPreview
+- add: PixelColorRef
