@@ -21,3 +21,8 @@
 - fix: adjust to resize of widget
 - add: PixelColorPreview
 - add: PixelColorRef
+
+## 1.2.1
+
+- add: documents
+- fix: import

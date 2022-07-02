@@ -46,6 +46,40 @@ void onTap(int x, int y, Color color) async {
 ```
 
 <br>
+<br>
+<br>
+
+## Color-Preview Widget
+
+- diagram explain
+
+![diagram](https://github.com/rbdog/pixel_color_image/blob/main/resources/images/pixel-color-preview.png?raw=true)
+
+### 1. create Ref (put it at the place you can keep e.g. global)
+
+```
+final ref = PixelColorRef();
+```
+
+### 2. pass ref to the PixelColor widget
+
+```
+final img = PixelColor.assetImage(
+  ...
+  ...
+  ref: ref,
+);
+```
+
+### 3. pass ref to the Rreview widget
+
+```
+final preview = PixelColorPreview(
+  ref: ref,
+);
+```
+
+<br>
 
 🎉 any issues, requests, contributions are welcomed!
 

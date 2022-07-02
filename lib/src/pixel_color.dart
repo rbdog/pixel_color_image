@@ -1,6 +1,8 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:pixel_color_image/pixel_color_image.dart';
+import 'package:pixel_color_image/src/get_image_bytes_asset.dart';
+import 'package:pixel_color_image/src/get_image_bytes_url.dart';
+import 'package:pixel_color_image/src/pixel_color_image.dart';
 import 'package:pixel_color_image/src/pixel_color_preview.dart';
 
 /// PixelColor
